@@ -43,7 +43,7 @@ function save(){
     data: JSON.stringify(data),
     success: function(result) {
       sharedData=JSON.stringify(result);
-      // Handle the processed data received from Python
+
       console.log(sharedData);
     },
   });

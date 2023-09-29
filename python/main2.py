@@ -41,7 +41,7 @@ def process_data():
 
         response = jsonify(result)
 
-        # Set CORS headers in the response
+     
         response.headers.add('Access-Control-Allow-Origin', 'http://127.0.0.1:5500')
 
         return response

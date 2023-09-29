@@ -10,7 +10,6 @@ function sendDataToPython(data) {
     data: JSON.stringify(data),
     success: function(result) {
       sharedData=JSON.stringify(result);
-      // Handle the processed data received from Python
       console.log(sharedData);
       localStorage.setItem("result", sharedData);
     },
@@ -25,11 +24,9 @@ function ding() {
   
   const data = { name, passw };
 
-  // Send the data to Python using AJAX
   sendDataToPython(data);
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-  // Your code here
   btn.addEventListener('click', ding);
 });

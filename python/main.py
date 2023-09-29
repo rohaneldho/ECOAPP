@@ -42,8 +42,6 @@ def process_data():
 
         response = jsonify(result)
 
-        # Set CORS headers in the response
-        #response.headers.add('Access-Control-Allow-Origin', 'http://127.0.0.1:5500')
 
         return response
 
@@ -79,8 +77,7 @@ def saving_data():
         saving_to_database(result)
         response = jsonify(result)
 
-        # Set CORS headers in the response
-        #response.headers.add('Access-Control-Allow-Origin', 'http://127.0.0.1:5500')
+
 
         return response
 
