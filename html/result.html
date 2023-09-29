@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/styling2.css">
+    <title>Ecolyf - Dashboard</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Ecolyf</h1>
+        <p>Signed in as: <span id="outputName"></span></p>
+    </header>
+
+    <main>
+        <section id="counts">
+            <div class="count-card">
+                <h2>Plant New Tree?</h2>
+                <section id="photoUploadSection">
+                    <h2>Upload Verification Photo</h2>
+                    <form id="file-upload-form" enctype="multipart/form-data">
+                        <label for="file-input1" id="file-label1">Choose File</label>
+                        <input type="file" id="file-input1" name="file" accept="image/*" style="display: none;">
+                        <button type="button" id="uploadPhoto" onclick="tf()">Upload File</button>
+                    </form>
+                   
+                    <div id="uploadedPhotoContainer"></div>
+                </section>
+            </div>
+            <div class="count-card">
+                <h2>Recycled New Plastic?</h2>
+                <section id="photoUploadSection">
+                    <h2>Upload Verification Photo</h2>
+                    <form id="file-upload-form" enctype="multipart/form-data">
+                        <label for="file-input" id="file-label">Choose File</label>
+                        <input type="file" id="file-input" name="file" accept="image/*" style="display: none;">
+                        <button type="button" id="uploadPhoto" onclick="pf()">Upload File</button>
+                    </form>
+                    <div id="uploadedPhotoContainer"></div>
+                </section>
+            </div>
+        </section>
+
+        <section id="points">
+            <h2>Your Points</h2>
+            <p>Total Trees Planted: <span id="totalTrees">0</span></p>
+            <p>Total Plastic Collected: <span id="totalPlastic">0</span></p>
+            <p>Total Points: <span id="totalPoints">0</span></p>
+        </section>
+        
+        <button id="exitButton" class="exit-button" onclick="history.back()">Back</button>
+        <button id="saveButton" class="save" onclick="save()">SAVE</button>
+
+       
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 Ecolyf. All rights reserved.</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/script2.js"></script>
+
+</body>
+
+</html>
